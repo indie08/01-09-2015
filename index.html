@@ -6,8 +6,28 @@
 <link rel="stylesheet" type="text/css" href="page.css" />
 <script type="text/javascript" src="jquery.min.js"></script>
 <script type="text/javascript" src="jquery.js"></script>
-<title>Documento sin título</title>
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
 
+    // Wait for device API libraries to load//
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+
+    // device APIs are available //
+    function onDeviceReady() {
+        // Register the event listener
+        document.addEventListener("backbutton", onBackKeyDown, false);
+    }
+
+    // Handle the back button //
+    function onBackKeyDown() {
+    }
+
+    </script>
+
+<title></title>
+<body onload="onLoad()">
 </head>
 <div class="page">
     <div class="center">
@@ -21,6 +41,6 @@
       <div id="load-async"></div>
       </div>
 </div>
-<body>
+
 </body>
 </html>
